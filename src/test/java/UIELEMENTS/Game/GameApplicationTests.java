@@ -10,7 +10,7 @@ import java.util.Date;
 class GameApplicationTests {
 
 	@Test
-	public void testGettersAndSetters(){
+	public void testActorGettersAndSetters(){
 		Actor actor1 = new Actor();
 		actor1.setActorid(5);
 		Assertions.assertEquals(5,actor1.getActorid(), "Actor id error");
@@ -18,6 +18,9 @@ class GameApplicationTests {
 		Assertions.assertEquals("Firstnametest",actor1.getFirstname(), "First name error");
 		actor1.setLastname("Lastnametest");
 		Assertions.assertEquals("Lastnametest",actor1.getLastname(), "Last name error");
+		actor1.setLastname("Lastnametest");
+		Assertions.assertEquals("Lastnametest",actor1.getLastname(), "Last name error");
+
 	}
 
 	@Test
