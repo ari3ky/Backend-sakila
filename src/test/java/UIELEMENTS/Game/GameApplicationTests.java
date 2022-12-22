@@ -18,5 +18,16 @@ class GameApplicationTests {
 		Assertions.assertEquals("Lastnametest",actor1.getLastname(), "Last name error");
 	}
 
+	@Test
+	public void testFilmGettersAndSetters(){
+		Film film1 = new Film();
+		film1.setFilmid(5);
+		Assertions.assertEquals(5,film1.getFilmid(), "Actor id error");
+		film1.setTitle("Title1");
+		Assertions.assertNotEquals("Title",film1.getTitle(), "Title error");
+//		film1.set("Lastnametest");
+//		Assertions.assertEquals("Lastnametest",film1.getLastname(), "Last name error");
+	}
+
 
 }
