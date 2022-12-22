@@ -18,10 +18,8 @@ public class Actor {
     String lastname;
 
     public Actor(){};
-    public Actor(long id,String firstname, String lastname){
-        this.firstname = firstname;
-        this.lastname = lastname;
-    }
+
+
     public long getActorid() {
         return actorid;
     }
