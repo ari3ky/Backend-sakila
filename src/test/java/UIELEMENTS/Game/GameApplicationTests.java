@@ -62,14 +62,4 @@ class GameApplicationTests {
 
 
 	}
-@Test
-	public void Actor() {
-		Actor actor2 = new Actor();
-		actor2.firstname = ("firstname");
-		Assertions.assertEquals("firstname",actor2.firstname, "firstname error");
-		actor2.lastname = "lastname";
-		Assertions.assertEquals("lastname",actor2.lastname, "lastname error");
-
-}
-
 }

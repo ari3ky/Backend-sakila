@@ -32,12 +32,12 @@ public class Category {
         this.categoryname = categoryname;
     }
 
-    public Date getLastupdate() {
-        return lastupdate;
-    }
-
-    public void setLastupdate(Date lastupdate) {
-        this.lastupdate = lastupdate;
-    }
+//    public Date getLastupdate() {
+//        return lastupdate;
+//    }
+//
+//    public void setLastupdate(Date lastupdate) {
+//        this.lastupdate = lastupdate;
+//    }
 }
 
