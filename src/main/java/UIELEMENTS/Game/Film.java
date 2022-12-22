@@ -71,13 +71,13 @@ import java.util.List;
         this.description = description;
     }
 
-    public Date getRelease_Year() {
-        return release_Year;
-    }
-
-    public void setRelease_Year(Date release_Year) {
-        this.release_Year = release_Year;
-    }
+//    public Date getRelease_Year() {
+//        return release_Year;
+//    }
+//
+//    public void setRelease_Year(Date release_Year) {
+//        this.release_Year = release_Year;
+//    }
 
     public int getLanguage_ID() {
         return language_ID;
@@ -135,16 +135,16 @@ import java.util.List;
         this.special_Features = special_Features;
     }
 
-    public Date getLast_Update() {
-        return last_Update;
-    }
+//    public Date getLast_Update() {
+//        return last_Update;
+//    }
+//
+//    public void setLast_Update(Date last_Update) {
+//        this.last_Update = last_Update;
+//    }
 
-    public void setLast_Update(Date last_Update) {
-        this.last_Update = last_Update;
-    }
-
-    @Column (name="last_update")
-        Date last_Update;
+//    @Column (name="last_update")
+//        Date last_Update;
 
 
         public Film (){

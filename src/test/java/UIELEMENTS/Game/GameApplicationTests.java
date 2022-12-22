@@ -32,14 +32,12 @@ class GameApplicationTests {
 		Assertions.assertNotEquals("Title",film1.getTitle(), "Title error");
 		film1.setDescription("Description");
 		Assertions.assertEquals("Description",film1.getDescription(), "Description error");
-		film1.setRelease_Year(new Date(2006-02-15));
-		Assertions.assertNotEquals(2006-02-15,film1.getRelease_Year(), "Release Year error");
 		film1.setLanguage_ID(1);
-		Assertions.assertNotEquals("Languagetest",film1.getLanguage_ID(), "Language ID error");
+		Assertions.assertNotEquals(7,film1.getLanguage_ID(), "Language ID error");
 		film1.setRental_Duration(2);
-		Assertions.assertNotEquals("RentalDurationtest",film1.getRental_Duration(), "Rental duration error");
+		Assertions.assertNotEquals(9,film1.getRental_Duration(), "Rental duration error");
 		film1.setRental_Rate(3);
-		Assertions.assertNotEquals("RentalRatetest",film1.getRental_Rate(), "Rental rate error");
+		Assertions.assertNotEquals(5.66,film1.getRental_Rate(), "Rental rate error");
 		film1.setLength(5);
 		Assertions.assertEquals(5,film1.getLength(), "Length error");
 		film1.setReplacement_Cost(15);
@@ -48,8 +46,7 @@ class GameApplicationTests {
 		Assertions.assertEquals("PG",film1.getRating(), "Rating error");
 		film1.setSpecial_Features("Deleted Scenes");
 		Assertions.assertEquals("Deleted Scenes",film1.getSpecial_Features(), "Special features error");
-		film1.setLast_Update(new Date());
-		Assertions.assertNotEquals(2006-02-15,film1.getLast_Update(), "Last update error");
+
 
 
 

@@ -152,7 +152,7 @@ public class GameApplication {
 		updateFilm.setFilmid(filmDetails.getFilmid());
 		updateFilm.setTitle(filmDetails.getTitle());
 		updateFilm.setDescription(filmDetails.getDescription());
-		updateFilm.setRelease_Year(filmDetails.getRelease_Year());
+//		updateFilm.setRelease_Year(filmDetails.getRelease_Year());
 		updateFilm.setLanguage_ID(filmDetails.getLanguage_ID());
 		updateFilm.setRental_Duration(filmDetails.getRental_Duration());
 		updateFilm.setRental_Rate(filmDetails.getRental_Rate());
@@ -160,7 +160,7 @@ public class GameApplication {
 		updateFilm.setReplacement_Cost(filmDetails.getReplacement_Cost());
 		updateFilm.setRating(filmDetails.getRating());
 		updateFilm.setSpecial_Features(filmDetails.getSpecial_Features());
-		updateFilm.setLast_Update(filmDetails.getLast_Update());
+//		updateFilm.setLast_Update(filmDetails.getLast_Update());
 
 		filmRepository.save(updateFilm);
 
