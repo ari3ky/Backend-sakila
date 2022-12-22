@@ -28,21 +28,16 @@ import org.springframework.stereotype.Repository;
     Iterable<FilmCatIntf> getFilm_CatByID(@Param("category_search_id")int category_search_id);
 
 
-//    @Query(value = "SELECT * " +
-//           "FROM film " +
-//           "WHERE film.title LIKE %:film_desc%", nativeQuery = true)
-//            Iterable<Film> getFilmBy_Desc(@Param("film_desc")String film_desc); //Working on this
+    @Query(value = "SELECT * " +
+           "FROM film " +
+           "WHERE film.description LIKE %:film_desc%", nativeQuery = true)
+            Iterable<Film> getFilmBy_Desc(@Param("film_desc")String film_desc);
 //
-//    @Query(value = "SELECT * " +
-//            "FROM film " +
-//            "WHERE film.title LIKE %:film_name%", nativeQuery = true)
-//    Iterable<Film> getFilmBy_Name(@Param("film_desc")String film_desc);//working on this
+    @Query(value = "SELECT * " +
+            "FROM film " +
+            "WHERE film.title LIKE %:film_name%", nativeQuery = true)
+    Iterable<Film> getFilmBy_Name(@Param("film_name")String film_name);
 
-    //    @Query(value = "SELECT film.title, category.name " +
-//            "From film " +
-//            "INNER JOIN film_category ON film.film_id = film_category.film_id" +
-//            "INNER JOIN category ON film_category.category_id = category.category_id ", nativeQuery = true)
-//    Iterable<FilmCatIntf> getFilm_CatByID()(@Param("category_category_id")int category_category_id);
 
 
 

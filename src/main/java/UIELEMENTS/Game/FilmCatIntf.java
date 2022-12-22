@@ -1,7 +1,7 @@
 package UIELEMENTS.Game;
 
 public interface FilmCatIntf {
-    String getitle();
+    String gettitle();
     String getname();
 
 }

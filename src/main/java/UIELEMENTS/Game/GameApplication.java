@@ -81,10 +81,13 @@ public class GameApplication {
 
 	@GetMapping("/getCategory/{categoryID}")
 	public @ResponseBody
-	Category getCategoryByID(@PathVariable("categoryID") int categoryID) {
-		Category category = categoryRepository.findById(categoryID)
+	ArrayList<Category> getCategoryByID(@PathVariable("categoryID") int categoryID) {
+		ArrayList<Category> categorys = new ArrayList<Category>();
+				Category category = categoryRepository.findById(categoryID)
 				.orElseThrow(() -> new ResourceAccessException(("Category ID does not exist in: ") + categoryID));
-		return category;
+				categorys.add(category);
+		return categorys;
+
 	}
 
 	@PutMapping("/putCategory/{categoryID}")
@@ -108,10 +111,12 @@ public class GameApplication {
 
 	@GetMapping("/getFilm/{filmID}")
 	public @ResponseBody
-	Film getFilmByID(@PathVariable("filmID") int filmID) {
+		ArrayList<Film> getFilmByID(@PathVariable("filmID") int filmID) {
+		ArrayList<Film> films = new ArrayList<Film>();
 		Film film = filmRepository.findById(filmID)
-				.orElseThrow(() -> new ResourceAccessException(("Film ID does not exist in: ") + filmID));
-		return film;
+					.orElseThrow(() -> new ResourceAccessException("Film ID does not exist" + filmID));
+			films.add(film);
+			return films;
 	}
 
 	@GetMapping("/allfilms_actors")
@@ -129,15 +134,15 @@ public class GameApplication {
 		return (Iterable<FilmCatIntf>) filmRepository.getFilm_CatByID(id);
 	}
 
-//	@GetMapping("/allfilms_desc/{desc}")
-//	public @ResponseBody Iterable<Film> getFilmDesc(@PathVariable String desc) {//Working on this still
-//		return (Iterable<Film>) filmRepository.getFilmBy_Desc(desc);
-//	}
+	@GetMapping("/allfilms_desc/{desc}")
+	public @ResponseBody Iterable<Film> getFilmDesc(@PathVariable String desc) {
+		return (Iterable<Film>) filmRepository.getFilmBy_Desc(desc);
+	}
 
-//	@GetMapping("/allfilms_name/{name}")
-//	public @ResponseBody Iterable<Film> getFilmName(@PathVariable String name) {//Working on this still
-//		return (Iterable<Film>) filmRepository.getFilmBy_Name(name);
-//	}
+	@GetMapping("/allfilms_name/{name}")
+	public @ResponseBody Iterable<Film> getFilmName(@PathVariable String name) {
+		return (Iterable<Film>) filmRepository.getFilmBy_Name(name);
+	}
 
 	@PutMapping("/putFilm/{filmID}")
 	public ResponseEntity<Film> updateFilm(@PathVariable int filmID, @RequestBody Film filmDetails) {
@@ -171,7 +176,9 @@ public class GameApplication {
 
 	@PostMapping("/actors")
 	public ResponseEntity<Actor> createActor(@RequestBody Actor actor) {
-		Actor actor1 = actorRepository.save(actor);
+		Actor actor1 = actor;
+		//int id, String firstname, String lastname
+		Actor actor2 = actorRepository.save(actor);
 		return ResponseEntity.ok(actor1);
 	}
 }

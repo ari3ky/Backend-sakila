@@ -7,8 +7,8 @@ import jakarta.persistence.*;
 
 public class Actor {
     @Id //basically the primary key for this class attribute
-    @Column(name="actor_id")
-    @GeneratedValue(strategy=GenerationType.TABLE)
+    @Column(name = "actor_id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long actorid;
 
     @Column(name="first_name")
@@ -17,6 +17,11 @@ public class Actor {
     @Column(name="Last_name")
     String lastname;
 
+    public Actor(){};
+    public Actor(long id,String firstname, String lastname){
+        this.firstname = firstname;
+        this.lastname = lastname;
+    }
     public long getActorid() {
         return actorid;
     }
