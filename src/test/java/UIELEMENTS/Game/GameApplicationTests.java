@@ -59,10 +59,17 @@ class GameApplicationTests {
 		Assertions.assertEquals(2,category1.getCategoryid(), "Category ID error");
 		category1.setCategoryname("Action");
 		Assertions.assertEquals("Action",category1.getCategoryname(), "Category name error");
-		category1.setLastupdate(new Date());
-		Assertions.assertNotEquals(2008,category1.getLastupdate(), "Date error");
+
 
 	}
+@Test
+	public void Actor() {
+		Actor actor2 = new Actor();
+		actor2.firstname = ("firstname");
+		Assertions.assertEquals("firstname",actor2.firstname, "firstname error");
+		actor2.lastname = "lastname";
+		Assertions.assertEquals("lastname",actor2.lastname, "lastname error");
 
+}
 
 }
