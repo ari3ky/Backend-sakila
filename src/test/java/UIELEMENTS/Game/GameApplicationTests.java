@@ -59,7 +59,6 @@ class GameApplicationTests {
 		Assertions.assertEquals(2,category1.getCategoryid(), "Category ID error");
 		category1.setCategoryname("Action");
 		Assertions.assertEquals("Action",category1.getCategoryname(), "Category name error");
-
-
+		
 	}
 }
